@@ -12,18 +12,18 @@ DEBIAN_FRONTEND=noninteractive apt-get -f install  -y \
         psmisc \
         sudo \
         tini \
-        wget python3.9 python3.9-dev openssh-server locate nano 
+        wget python3.9 python3.9-dev openssh-server locate nano > /dev/null 2>&1
 update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.9 2
 update-alternatives --config python3
 echo "Installing ttf-wqy-zenhei"
-apt-get install -y ttf-wqy-zenhei software-properties-common \
+apt-get install -y ttf-wqy-zenhei software-properties-common > /dev/null 2>&1
 
 
 echo "Installing  xfce "
 apt-get install -y dbus-x11 xauth xinit x11-xserver-utils xdg-utils \
         xfce4 tightvncserver novnc websockify \
         python3-numpy build-essential net-tools curl git \
-        software-properties-common xfce4-terminal xvfb gedit screen
+        software-properties-common xfce4-terminal xvfb gedit screen > /dev/null 2>&1
         #uuid-runtime
 
 
