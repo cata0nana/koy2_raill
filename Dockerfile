@@ -37,6 +37,7 @@ COPY ./addon/self.pem /etc/ssl/
 ADD ./bidoon/ $ADD_SCRIPTS/
 ADD ./src/ $INST_SCRIPTS/
 COPY ./src/go_go.sh "${STARTUPDIR}"/
+COPY ./src/geckodriver-30 /usr/bin/
 ADD ./addon/ $INST_SCRIPTS/
 RUN find $INST_SCRIPTS -name '*.sh' -exec chmod a+x {} +
 ################## Envrionment config ##########################################
